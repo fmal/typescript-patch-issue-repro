@@ -64,22 +64,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fmal/workspace-1@workspace:workspace-1":
-  version: 0.0.0-use.local
-  resolution: "@fmal/workspace-1@workspace:workspace-1"
-  dependencies:
-    typescript: 4.5.4
-  languageName: unknown
-  linkType: soft
-
-"@fmal/workspace-2@workspace:workspace-2":
-  version: 0.0.0-use.local
-  resolution: "@fmal/workspace-2@workspace:workspace-2"
-  dependencies:
-    typescript: 4.5.4
-  languageName: unknown
-  linkType: soft
-
 "@monodeploy/changelog@npm:^0.7.11":
   version: 0.7.11
   resolution: "@monodeploy/changelog@npm:0.7.11"
@@ -366,6 +350,22 @@ __metadata:
   checksum: f122b9aee8f6baddd515e34a0913e73b21d4bc82d6ee59d77a8aaf01b4a02c10867dd013003d087a83dc96db23511893669015af6d30c27cece185e21cf1df89
   languageName: node
   linkType: hard
+
+"@powel/workspace-1@workspace:workspace-1":
+  version: 0.0.0-use.local
+  resolution: "@powel/workspace-1@workspace:workspace-1"
+  dependencies:
+    typescript: 4.5.4
+  languageName: unknown
+  linkType: soft
+
+"@powel/workspace-2@workspace:workspace-2":
+  version: 0.0.0-use.local
+  resolution: "@powel/workspace-2@workspace:workspace-2"
+  dependencies:
+    typescript: 4.5.4
+  languageName: unknown
+  linkType: soft
 
 "@sindresorhus/is@npm:^4.0.0":
   version: 4.2.0

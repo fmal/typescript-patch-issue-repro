@@ -23,19 +23,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
-        "name": "@fmal/workspace-1",
+        "name": "@powel/workspace-1",
         "reference": "workspace:workspace-1"
       },
       {
-        "name": "@fmal/workspace-2",
+        "name": "@powel/workspace-2",
         "reference": "workspace:workspace-2"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["@fmal/workspace-1", ["workspace:workspace-1"]],
-      ["@fmal/workspace-2", ["workspace:workspace-2"]],
+      ["@powel/workspace-1", ["workspace:workspace-1"]],
+      ["@powel/workspace-2", ["workspace:workspace-2"]],
       ["typescript-patch-issue-repro", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -121,26 +121,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@chevrotain/utils", "npm:9.1.0"]
           ],
           "linkType": "HARD",
-        }]
-      ]],
-      ["@fmal/workspace-1", [
-        ["workspace:workspace-1", {
-          "packageLocation": "./workspace-1/",
-          "packageDependencies": [
-            ["@fmal/workspace-1", "workspace:workspace-1"],
-            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
-      ["@fmal/workspace-2", [
-        ["workspace:workspace-2", {
-          "packageLocation": "./workspace-2/",
-          "packageDependencies": [
-            ["@fmal/workspace-2", "workspace:workspace-2"],
-            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
-          ],
-          "linkType": "SOFT",
         }]
       ]],
       ["@monodeploy/changelog", [
@@ -670,6 +650,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@octokit/openapi-types", "npm:11.2.0"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["@powel/workspace-1", [
+        ["workspace:workspace-1", {
+          "packageLocation": "./workspace-1/",
+          "packageDependencies": [
+            ["@powel/workspace-1", "workspace:workspace-1"],
+            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@powel/workspace-2", [
+        ["workspace:workspace-2", {
+          "packageLocation": "./workspace-2/",
+          "packageDependencies": [
+            ["@powel/workspace-2", "workspace:workspace-2"],
+            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["@sindresorhus/is", [
