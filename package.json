@@ -1,0 +1,27 @@
+{
+  "name": "typescript-patch-issue-repro",
+  "version": "0.0.0-ignore",
+  "private": true,
+  "workspaces": [
+    "workspace-1",
+    "workspace-2"
+  ],
+  "engines": {
+    "node": ">=14",
+    "yarn": ">=1.21"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow yarn",
+    "build": "yarn workspaces foreach -tv run prepack",
+    "release": "monodeploy --config-file monodeploy.config.js --log-level 0",
+    "release:dry": "yarn run release --dry-run"
+  },
+  "packageManager": "yarn@3.1.1",
+  "dependencies": {
+    "@monodeploy/plugin-github": "0.3.13",
+    "@monodeploy/types": "0.10.4",
+    "conventional-changelog-conventionalcommits": "4.6.1",
+    "monodeploy": "2.8.18",
+    "typescript": "4.5.4"
+  }
+}

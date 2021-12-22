@@ -1,0 +1,16 @@
+{
+  "name": "@fmal/workspace-1",
+  "description": "Workspace 1",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "module": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "prepack": "yarn run build"
+  },
+  "dependencies": {
+    "typescript": "4.5.4"
+  }
+}

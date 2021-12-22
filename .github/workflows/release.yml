@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+env:
+  NPM_PUBLISH_TOKEN: ${{ secrets.PUBLISH_NPM_TOKEN }}
+
+jobs:
+  release-packages:
+    name: Release packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+          fetch-depth: 0
+      - uses: fregante/setup-git-user@v1
+      - name: Use Node.js latest
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: Install deps
+        run: yarn install --immutable --immutable-cache
+      - name: Build
+        run: yarn run build
+      - name: Execute releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRERELEASE: true
+        run: |
+          yarn run release
