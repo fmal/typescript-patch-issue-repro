@@ -30,3 +30,6 @@ jobs:
           PRERELEASE: true
         run: |
           yarn run release
+      - name: Print status
+        run: |
+          git status
